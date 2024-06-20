@@ -7,9 +7,12 @@ app.use(cors())
 
 // 获取小说
 app.get('/', (req, res) => {
-  res.send('一个简单的应用')
+  res.send(`<div>一个简单的应用</div>
+    <div>从此地址寻找对应的小说，然后进行拼接跳转，主要是修改地址末尾的数字（171274）为对应的小说即可。列如：</div>
+    <div>https://netlify-express-ten.vercel.app/book?url=https://www.wwscdh.com/html/171274</div>
+    `)
 })
-
+https://www.wwscdh.com
 // 获取小说
 app.get('/book', (req, res) => {
   const { url } = req.query
