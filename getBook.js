@@ -42,8 +42,8 @@ function getNovelLenth(options) {
       targetFilePath = path.join('/tmp', `/${bookName + uid}`)
       // 初始化文件夹
       deleteFolderRecursive(targetFilePath)
-      response.send('文件创建成功')
-      // loop_read()
+
+      loop_read()
     })
 
 
