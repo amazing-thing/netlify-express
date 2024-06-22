@@ -39,7 +39,7 @@ function getNovelLenth(options) {
       response.uid = uid
 
       // 设置目标路径文件夹
-      targetFilePath = path.resolve(process.cwd(), './file', `./${bookName + uid}`)
+      targetFilePath = path.join('/tmp', './file', `./${bookName + uid}`)
       // 初始化文件夹
       deleteFolderRecursive(targetFilePath)
 

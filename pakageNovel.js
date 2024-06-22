@@ -6,10 +6,10 @@ const { deleteFolderRecursive } = require('./utils')
 
 function translateNovel(response) {
   // 从哪个文件夹读取数据
-  const dirPath = path.resolve(process.cwd(), './file', `./${response.bookName + response.uid}`)
+  const dirPath = path.join('/tmp', './file', `./${response.bookName + response.uid}`)
 
   // 新章节目录
-  const newFileDir = path.resolve(process.cwd(), './newFiles', `./${response.bookName + response.uid}`)
+  const newFileDir = path.join('/tmp', './newFiles', `./${response.bookName + response.uid}`)
   // 初始化文件夹
   deleteFolderRecursive(newFileDir)
 
